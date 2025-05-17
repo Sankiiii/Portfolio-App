@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:portfolio_assi/utils/app_colors.dart';
 import 'package:portfolio_assi/model/project.dart';
 
 class ProjectCard extends StatelessWidget {
@@ -11,54 +13,61 @@ class ProjectCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Card(
-      margin: const EdgeInsets.only(bottom: 16),
-      elevation: 0,
-      shape: RoundedRectangleBorder(
-        borderRadius: BorderRadius.circular(12),
-        side: BorderSide(color: Colors.grey.shade300),
+    return Container(
+      margin: EdgeInsets.only(bottom: 12.h),
+      decoration: BoxDecoration(
+        color: Colors.white,
+        borderRadius: BorderRadius.circular(12.r),
+        border: Border.all(
+          color: AppColors.border,
+          width: 1,
+        ),
       ),
       child: Row(
         children: [
           ClipRRect(
-            borderRadius: const BorderRadius.only(
-              topLeft: Radius.circular(12),
-              bottomLeft: Radius.circular(12),
+            borderRadius: BorderRadius.only(
+              topLeft: Radius.circular(12.r),
+              bottomLeft: Radius.circular(12.r),
             ),
             child: Image.asset(
               project.image,
-              width: 150,
-              height: 150,
+              width: 80.w,
+              height: 80.h,
               fit: BoxFit.cover,
             ),
           ),
           Expanded(
             child: Padding(
-              padding: const EdgeInsets.all(12),
+              padding: EdgeInsets.all(12.r),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text(
                     project.title,
-                    style: const TextStyle(
-                      fontWeight: FontWeight.bold,
-                      fontSize: 16,
+                    style: TextStyle(
+                      fontWeight: FontWeight.w600,
+                      fontSize: 14.sp,
+                      color: AppColors.textPrimary,
                     ),
+                    maxLines: 1,
+                    overflow: TextOverflow.ellipsis,
                   ),
-                  const SizedBox(height: 4),
+                  SizedBox(height: 4.h),
                   Text(
                     project.language,
-                    style: const TextStyle(
-                      color: Colors.grey,
-                      fontSize: 12,
+                    style: TextStyle(
+                      color: AppColors.textSecondary,
+                      fontSize: 12.sp,
+                      fontWeight: FontWeight.w500,
                     ),
                   ),
-                  const SizedBox(height: 2),
+                  SizedBox(height: 2.h),
                   Text(
                     'Oleh ${project.author}',
                     style: TextStyle(
-                      color: Colors.grey.shade700,
-                      fontSize: 12,
+                      color: AppColors.textSecondary,
+                      fontSize: 12.sp,
                     ),
                   ),
                 ],
@@ -66,19 +75,20 @@ class ProjectCard extends StatelessWidget {
             ),
           ),
           Container(
-            margin: const EdgeInsets.only(right: 12),
-            width: 28,
-            height: 28,
+            margin: EdgeInsets.only(right: 12.w),
+            width: 28.w,
+            height: 28.h,
             decoration: BoxDecoration(
-              color: Colors.amber,
-              borderRadius: BorderRadius.circular(4),
+              color: AppColors.gradeA,
+              borderRadius: BorderRadius.circular(4.r),
             ),
             alignment: Alignment.center,
             child: Text(
               project.grade,
-              style: const TextStyle(
+              style: TextStyle(
                 color: Colors.white,
-                fontWeight: FontWeight.bold,
+                fontWeight: FontWeight.w700,
+                fontSize: 14.sp,
               ),
             ),
           ),
