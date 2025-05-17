@@ -13,42 +13,43 @@ class PortfolioScreen extends StatefulWidget {
 class _PortfolioScreenState extends State<PortfolioScreen> with SingleTickerProviderStateMixin {
   late TabController _tabController;
   final List<Project> projects = [
-    Project(
-      title: 'Kemampuan Merangkum Tulisan',
-      language: 'BAHASA SUNDA',
-      author: 'Al-Bajaj Samaan',
-      image: 'assets/images/writing_4.jpg',
-      grade: 'A',
-    ),
-    Project(
-      title: 'Kemampuan Merangkum Tulisan',
-      language: 'BAHASA SUNDA',
-      author: 'Al-Bajaj Samaan',
-      image: 'assets/images/writing_4.jpg',
-      grade: 'A',
-    ),
-    Project(
-      title: 'Kemampuan Merangkum Tulisan',
-      language: 'BAHASA SUNDA',
-      author: 'Al-Bajaj Samaan',
-      image: 'assets/images/writing_4.jpg',
-      grade: 'A',
-    ),
-    Project(
-      title: 'Kemampuan Merangkum Tulisan',
-      language: 'BAHASA SUNDA',
-      author: 'Al-Bajaj Samaan',
-      image: 'assets/images/writing_4.jpg',
-      grade: 'A',
-    ),
-    Project(
-      title: 'Kemampuan Merangkum Tulisan',
-      language: 'BAHASA SUNDA',
-      author: 'Al-Bajaj Samaan',
-      image: 'assets/images/writing_4.jpg',
-      grade: 'A',
-    ),
-  ];
+  Project(
+    title: 'Samajik Samasyaon Par Nibandh',
+    language: 'HINDI',
+    author: 'Ravi Sharma',
+    image: 'assets/images/writing_1.jpg',
+    grade: 'A',
+  ),
+  Project(
+    title: 'Bharatiya Lok Kathayein',
+    language: 'HINDI',
+    author: 'Pooja Verma',
+    image: 'assets/images/writing_2.jpg',
+    grade: 'A-',
+  ),
+  Project(
+    title: 'Swachh Bharat Abhiyan ka Mahatva',
+    language: 'HINDI',
+    author: 'Aman Gupta',
+    image: 'assets/images/writing_3.jpg',
+    grade: 'B+',
+  ),
+  Project(
+    title: 'Gandhiji ke Siddhant Aur Jeevan',
+    language: 'HINDI',
+    author: 'Neha Kulkarni',
+    image: 'assets/images/writing_4.jpg',
+    grade: 'A',
+  ),
+  Project(
+    title: 'Vikas aur Paryavaran ke Beech Santulan',
+    language: 'HINDI',
+    author: 'Rajesh Iyer',
+    image: 'assets/images/writing_5.jpg',
+    grade: 'A-',
+  ),
+];
+
 
   @override
   void initState() {
@@ -75,34 +76,15 @@ class _PortfolioScreenState extends State<PortfolioScreen> with SingleTickerProv
         ),
         actions: [
           IconButton(
-            icon: const Icon(Icons.shopping_bag_outlined, color: Colors.deepOrange),
+            icon: const Icon(Icons.shopping_bag, color: Colors.deepOrange),
             onPressed: () {},
           ),
           Stack(
             alignment: Alignment.topRight,
             children: [
               IconButton(
-                icon: const Icon(Icons.person_outline, color: Colors.deepOrange),
+                icon: const Icon(Icons.notifications, color: Colors.deepOrange),
                 onPressed: () {},
-              ),
-              Positioned(
-                right: 8,
-                top: 8,
-                child: Container(
-                  padding: const EdgeInsets.all(4),
-                  decoration: const BoxDecoration(
-                    color: Colors.deepOrange,
-                    shape: BoxShape.circle,
-                  ),
-                  child: const Text(
-                    'A',
-                    style: TextStyle(
-                      color: Colors.white,
-                      fontSize: 10,
-                      fontWeight: FontWeight.bold,
-                    ),
-                  ),
-                ),
               ),
             ],
           ),
@@ -131,7 +113,7 @@ class _PortfolioScreenState extends State<PortfolioScreen> with SingleTickerProv
           const Center(child: Text('Achievement Content')),
         ],
       ),
-      bottomNavigationBar: const CustomBottomNavigation(currentIndex: 2),
+      bottomNavigationBar: const CustomBottomNavigation(currentIndex: 1),
     );
   }
 
