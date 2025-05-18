@@ -42,6 +42,7 @@ Portfolio Page	Scrollable cards with search/filter
 
 # Clone the repo
 git clone [https://git@github.com:Sankiiii/Portfolio-App.git](https://github.com/Sankiiii/Portfolio-App.git)
+
 cd portfolio_assi
 
 # Install dependencies
