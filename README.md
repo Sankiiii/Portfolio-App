@@ -31,14 +31,18 @@ Portfolio Page	Scrollable cards with search/filter
     📌 Note: Replace the image filenames if your images differ from those shown below. Place all screenshots in a /screenshots/ directory.
 
 📌 Portfolio Page
-<img src="https://github.com/user-attachments/assets/f2111a14-0cec-4ce4-8a75-a3302771d3e8" width="400" />
+
+<img src="https://github.com/user-attachments/assets/f2111a14-0cec-4ce4-8a75-a3302771d3e8" width="400" /> 
+
+
 📌 Search Filtering
+
 <img src="https://github.com/user-attachments/assets/35cbedf3-b2ed-4fe2-84ac-dda38a99d6c9" width="400"/>
 📦 Installation
 
 # Clone the repo
-git clone https://github.com/your-username/portfolio_app_flutter.git
-cd portfolio_app_flutter
+git clone [https://git@github.com:Sankiiii/Portfolio-App.git](https://github.com/Sankiiii/Portfolio-App.git)
+cd portfolio_assi
 
 # Install dependencies
 flutter pub get
@@ -49,12 +53,6 @@ flutter run
 🧰 Tech Stack
 
     Flutter – For UI and app logic
-
-    flutter_screenutil – For responsive sizing and font scaling
-
-    flutter_svg – To render SVG icons exported from Figma
-
-    Custom Fonts – Stored under assets/fonts/ and configured in pubspec.yaml
 
 🔍 Search Filtering Logic
 
